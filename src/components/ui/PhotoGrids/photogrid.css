@@ -1,0 +1,112 @@
+.photo-btn-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.photogrid-wrapper {
+  position: relative;
+  border-top: 1rem solid black;
+  border-bottom: 1rem solid black;
+  border-radius: 1rem;
+  /* max-height: 620px; */
+}
+
+.photogrid-wrapper-hero {
+  position: relative;
+  border-top: 1rem solid black;
+  border-bottom: 1rem solid black;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.photo-btn-box {
+  overflow: hidden;
+  position: relative;
+  /* max-height: 300px; */
+}
+
+.photo-btn-box-HERO {
+  overflow: hidden;
+  position: relative;
+}
+
+.photo-btn {
+  position: relative;
+
+  /* if you change the min height in this clamp to 300px you get a smaller grid */
+  /* height: clamp(600px, 600px, 60vh); */
+  height: clamp(500px, 500px, 60vh);
+  width: clamp(500px, 500px, 60vw);
+
+  object-fit: cover;
+  object-position: center 51%;
+  transition: transform 0.4s ease-in-out, filter 0.3s ease !important;
+  cursor: pointer;
+  /* filter: brightness(80%); */
+}
+
+@media (max-width: 967px) {
+  .photo-btn {
+    height: clamp(300px, 400px, 60vh);
+  }
+}
+
+@media (max-width: 48.25em) {
+  .photo-btn {
+    height: clamp(300px, 600px, 60vh);
+  }
+}
+
+.photo-btn:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
+
+  /* filter: brightness(100%); */
+}
+
+.photo-hero {
+  position: relative;
+  /* height: clamp(200px, 600px, 80vh); */
+  object-fit: cover;
+  transition: transform 2s ease-in-out, filter 0.3s ease !important;
+  justify-self: center;
+  object-position: center 45%;
+}
+
+.photo-hero:hover {
+  -webkit-transform: scale(1.13);
+  -moz-transform: scale(1.13);
+  transform: scale(1.13);
+}
+
+.h4-title {
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 5px 0 black;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  z-index: 2;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 4px 25px 7px;
+  width: auto;
+  background: linear-gradient(#78c896, #549b6e);
+  border-radius: 0.7rem;
+  border: 2px solid black;
+
+  white-space: nowrap;
+  font-family: var(--special-font);
+}
+
+.h3-overlay {
+  position: absolute;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+    1px 5px 0 black;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%, -20%);
+  white-space: nowrap;
+}
